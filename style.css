@@ -181,6 +181,34 @@ h1 {
   object-fit: contain;
 }
 
+.live {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  min-height: 220px;
+}
+
+#camera {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.live.active #camera {
+  display: block;
+}
+
+.capture {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: linear-gradient(120deg, rgba(125, 240, 168, 0.25), rgba(122, 215, 255, 0.2));
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
 .placeholder {
   color: var(--muted);
   margin: 0;

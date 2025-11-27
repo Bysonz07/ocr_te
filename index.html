@@ -19,7 +19,8 @@
         <h1>Scan a math question, get the answer.</h1>
         <p class="lede">Upload or snap a picture. We’ll read the expressions, tidy them up, and calculate the results right away.</p>
         <div class="actions">
-          <label for="file-input" class="btn primary">Upload image</label>
+          <button class="btn primary" id="start-camera">Start camera</button>
+          <label for="file-input" class="btn secondary">Upload image</label>
           <input id="file-input" type="file" accept="image/*" hidden />
           <button class="btn ghost" id="run-sample">Use sample</button>
         </div>
@@ -36,12 +37,14 @@
     <section class="grid">
       <article class="card">
         <div class="card-head">
-          <h2>Image preview</h2>
-          <p class="hint">Supports phone snapshots; keep text upright for best accuracy.</p>
+          <h2>Camera & preview</h2>
+          <p class="hint">Use the rear camera on mobile for best OCR accuracy.</p>
         </div>
-        <div class="preview" id="preview">
-          <p class="placeholder">No image yet.</p>
+        <div class="live">
+          <video id="camera" playsinline muted></video>
+          <button class="btn capture" id="capture">Capture</button>
         </div>
+        <div class="preview" id="preview"><p class="placeholder">No image yet.</p></div>
       </article>
 
       <article class="card">
